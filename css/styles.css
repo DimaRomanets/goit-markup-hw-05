@@ -721,13 +721,18 @@ img {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-    fill: #ffffff background-color: --accent-color;
+    background-color: --accent-color;
     border: none;
 }
 
 .modal-close-icon {
     fill: rgb(46, 47, 66);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    fill: #ffffff;
 }
 
 .is-hidden {
