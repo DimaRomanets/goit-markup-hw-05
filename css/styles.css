@@ -133,13 +133,16 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--primery-text-color-theme-light);
+    /* color: var(--primery-text-color-theme-light); */
 
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
 
+    position: relative;
+    color: var(--accent-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 
 }
@@ -156,7 +159,7 @@ img {
 
 }
 
-.current::after {
+.menu-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -165,7 +168,6 @@ img {
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    transform: translateY(100%);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -200,6 +202,8 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color-theme-light);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
@@ -538,11 +542,13 @@ img {
     height: 88px;
 
     border-radius: 4px;
-    border: 1px solid #8E8F99;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #8E8F99;
+    /* border: 1px solid #8E8F99; */
     color: #8e8f99;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-list-icon {
@@ -674,7 +680,6 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    ;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -690,6 +695,10 @@ img {
     min-width: 408px;
     min-height: 576px;
     background-color: rgba(252, 252, 252, 1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
@@ -701,12 +710,24 @@ img {
     justify-content: center;
     width: 24px;
     height: 24px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    fill: #ffffff background-color: --accent-color;
+    border: none;
+}
+
+.modal-close-icon {
+    fill: rgb(46, 47, 66);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -758,6 +779,11 @@ img {
     border: 1px solid #E7E9FC;
     border-radius: 4px;
     padding: 12px 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -815,9 +841,7 @@ img {
     background-color: rgba(77, 90, 229, 1);
 
     text-align: center;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 40px 32px;
 
 
     position: absolute;
