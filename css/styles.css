@@ -133,14 +133,12 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    /* color: var(--primery-text-color-theme-light); */
+    color: var(--primery-text-color-theme-light);
 
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
 
-    position: relative;
-    color: var(--accent-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
@@ -154,12 +152,11 @@ img {
 
 .current {
     position: relative;
-    color: var(--accent-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
-.menu-link::after {
+.current::after {
     content: "";
     position: absolute;
     left: 0;
@@ -168,14 +165,13 @@ img {
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
-.current::after:hover,
-.current::after:focus {
-    transform: translateY(0%);
-}
+
 
 /* CONTACT */
 
@@ -836,7 +832,6 @@ img {
 }
 
 .overlay {
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
