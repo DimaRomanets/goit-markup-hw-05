@@ -152,7 +152,7 @@ img {
 
 .current {
     position: relative;
-
+    color: var(--accent-color);
 
 }
 
